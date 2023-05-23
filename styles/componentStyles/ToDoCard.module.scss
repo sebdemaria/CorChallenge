@@ -1,0 +1,89 @@
+@import "../sass-utils/index";
+
+.card {
+    border: 1px solid $gray;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    height: 250px;
+    max-width: 415px;
+    padding: 3em 2em;
+    position: relative;
+    overflow: scroll;
+
+    .actionsContainer {
+        display: flex;
+        gap: 1em;
+        position: absolute;
+        right: 1.5em;
+        top: 1em;
+        width: max-content;
+
+        .actions {
+            cursor: pointer;
+            height: auto;
+            width: 20px;
+        }
+
+        .loader {
+            height: auto;
+            margin-right: -1em;
+            width: 50px;
+        }
+    }
+
+    .specName {
+        font-weight: 700;
+    }
+
+    .specs {
+        display: flex;
+        gap: 3em;
+        width: 100%;
+    }
+
+    .title {
+        width: 100%;
+
+        .titleName {
+            margin-left: 0.5em;
+            font-size: 1.5em;
+        }
+    }
+
+    .description {
+        word-wrap: break-word;
+        width: 100%;
+    }
+}
+
+.Baja {
+    border-color: $lowPrioBlue;
+    background-color: $lowPrioBlueTransparent;
+    box-shadow: inset 0px 0px 5px 0.5px $lowPrioBlue;
+}
+
+.Media {
+    border-color: $midPrioYellow;
+    background-color: $midPrioYellowTransparent;
+    box-shadow: inset 0px 0px 5px 0.5px $midPrioYellow;
+}
+
+.Alta {
+    border-color: $highPrioRed;
+    background-color: $highPrioRedTransparent;
+    box-shadow: inset 0px 0px 5px 0.5px $highPrioRed;
+}
+
+@media (max-width: $xl) {
+    .card {
+        width: 50%;
+    }
+}
+
+@media (max-width: $md) {
+    .card {
+        width: 80%;
+    }
+}

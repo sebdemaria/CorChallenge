@@ -1,0 +1,50 @@
+@import "../../sass-utils/index";
+
+@include fadeIn;
+
+.input {
+    background-color: $transparent;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    height: 35px;
+    padding: 0.3em;
+    width: 100%;
+}
+
+.errorMessage {
+    animation: fadeIn 0.5s;
+    bottom: -1.5em;
+    color: $red;
+    position: absolute;
+    width: 100%;
+}
+
+.errorField {
+    animation: fadeIn 0.5s;
+    border-color: $red;
+}
+
+.inputSpan {
+    height: max-content;
+    position: relative;
+    width: 100%;
+
+    .textArea {
+        height: 150px;
+        width: 100%;
+    }
+}
+
+.selectContainer {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    .label {
+        color: $gray;
+        display: block;
+        font-size: 0.8em;
+        margin-bottom: 0.2em;
+        width: 50%;
+    }
+}
