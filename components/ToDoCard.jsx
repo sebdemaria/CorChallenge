@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Image from "next/image";
 
+import PropTypes from "prop-types";
+
 import { useAppContext, useManageToDos } from "hooks";
 
 import { submitResponse } from "consts/actions";
@@ -94,4 +96,14 @@ export const ToDoCard = ({ toDo }) => {
             </p>
         </div>
     );
+};
+
+ToDoCard.propTypes = {
+    toDo: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        prio: PropTypes.string.isRequired,
+        status: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+    })
 };
