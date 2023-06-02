@@ -114,9 +114,13 @@ export const CustomModal = () => {
                     role="button"
                     src={Cross}
                 />
-
-                <h2 className={styles.title}>Crear nueva tarea</h2>
-
+                {
+                    toDoSelected ? (
+                        <h2 className={styles.title}>Modificar tarea</h2>
+                    ) : (
+                        <h2 className={styles.title}>Crear nueva tarea</h2>
+                    )
+                }
                 <Formik
                     initialValues={{
                         id: toDoSelected?.id || "",
