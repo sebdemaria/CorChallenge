@@ -26,7 +26,7 @@ export const ToDoListHome = () => {
     return (
         <section className={styles.toDosSection}>
             {responseMessage &&
-            responseMessage?.status === submitResponse.OK ? (
+                responseMessage?.status === submitResponse.OK ? (
                 <span className={styles.responseMessage}>
                     <Image
                         src={Check}
@@ -51,7 +51,7 @@ export const ToDoListHome = () => {
                         <ToDoCard key={index} toDo={toDo} />
                     ))
                 ) : (
-                    <p>No tienes tareas creadas..</p>
+                    <p>No tienes tareas creadas...</p>
                 )}
             </div>
         </section>
